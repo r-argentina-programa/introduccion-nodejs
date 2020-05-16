@@ -1,0 +1,11 @@
+{{#if data.mensaje}}
+<p>{{data.mensaje}}</p>
+
+<img src="/{{data.nombreArchivo}}" />
+{{/if}}
+<!-- enctype="multipart/form-data" es lo que nos permite subir un archivo al servidor -->
+<form action="/form" method="POST" enctype="multipart/form-data">
+  <label for="imagen">Imagen: </label>
+  <input type="file" name="imagen" id="imagen">
+  <input type="submit" value="Subir" />
+</form>

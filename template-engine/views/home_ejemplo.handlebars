@@ -1,0 +1,14 @@
+<h1>Esto va adentro del body</h1>
+
+<p>Y acá agarro datos del servidor. Por ejemplo: Hola, <strong>{{data.nombre}}</strong></p>
+
+<p>Y acá agarro datos del servidor. Por ejemplo: Hola, <strong>{{data.nombreMayusculas}}</strong></p>
+
+<p>Y esto viene desde un archivo parcial (partial): </p>
+{{>navegacion items=data.listado}}
+
+{{#if data.esPar }}
+  <strong>ES PAR!</strong>
+{{else}}
+  <strong>ES IMPAR!!</strong>
+{{/if}}
