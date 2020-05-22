@@ -1,4 +1,7 @@
 // https://openclassrooms.com/en/courses/2504541-ultra-fast-applications-using-node-js/2504972-creating-your-first-app-with-node-js
+
+// en este script vemos cómo usar los códigos de respuesta para indicar éxito o error
+
 const http = require('http');
 const url = require('url');
 

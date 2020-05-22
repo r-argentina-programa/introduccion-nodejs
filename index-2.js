@@ -1,5 +1,9 @@
 // https://openclassrooms.com/en/courses/2504541-ultra-fast-applications-using-node-js/2504972-creating-your-first-app-with-node-js
+// Este script muestra cómo manejar diferentes rutas.
+
 const http = require('http');
+
+// url también es una librería "core" de node, es decir, no está incluida en package.json como una dependencia
 const url = require('url');
 
 const server = http.createServer((req, res) => {
@@ -15,7 +19,7 @@ const server = http.createServer((req, res) => {
     <!DOCTYPE html>
     <html>
     <head>
-    <meta charset='utf-8'> <!-- si comentamos esto, qué pasa? Probar con /sotano en el navegador -->
+    <meta charset='utf-8'> <!-- si comentamos esto, qué pasa? Probar con /sotano en el navegador (no en postman) -->
     <title>Introducción a Node.js</title>
     </head>
     <body>

@@ -14,7 +14,8 @@ app.use((req, res, next) => {
 // middleware para requests con content-type: application/json
 app.use(express.json());
 
-// middleware para parsear cualquier request como texto
+// middleware para parsear cualquier request como texto.
+// Si pongo este middleware primero, entonces nunca va a usar el de json (porque este atrapa todos)
 app.use(express.text({ type: '*/*' }));
 
 app.get('/', (req, res) => {
@@ -33,7 +34,6 @@ app.all('/todo', (req, res) => {
 app.put('/prueba-middleware', (req, res) => {
   res.send(`El body es ${JSON.stringify(req.body)}`);
 });
-
 
 app.delete('/borrar', (req, res) => {
   res.send(`El body es ${JSON.stringify(req.body)}`);
